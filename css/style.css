@@ -34,3 +34,7 @@ body {
   margin: auto;
   background-color: blue;
 }
+
+.bg-yellow {
+  background-color: yellow;
+}

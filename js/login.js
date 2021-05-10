@@ -1,6 +1,7 @@
 const TOKEN = "auth-token";
 
 function login() {
+  showLoading(true);
   let options = {
     method: "POST",
   };
@@ -24,6 +25,7 @@ function login() {
       console.log(token);
       //   sessionStorage.setItem(TOKEN, token);
       localStorage.setItem(TOKEN, token);
+      showLoading(false);
     });
   });
 
@@ -37,6 +39,8 @@ function printToken() {
 }
 
 function test() {
+  showLoading(true);
+
   let options = {
     method: "GET",
     headers: {
@@ -58,6 +62,7 @@ function test() {
       document.getElementById("welcome").style = "display: block";
       document.getElementById("dati-utente").innerHTML =
         "NomeUtente: " + userName;
+      showLoading(false);
     });
   });
 
@@ -76,4 +81,12 @@ function testPromise() {
   playPromise.then((pippo) => {
     alert(pippo);
   });
+}
+
+function showLoading(show) {
+  if (show) {
+    document.getElementById("loading-spinner").style = "display: block";
+  } else {
+    document.getElementById("loading-spinner").style = "display: none";
+  }
 }
