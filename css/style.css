@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: gainsboro;
+}
+
+.custom-color {
+  color: GAINSBORO;
+  background: red;
+}
+
+.custom-card {
+  width: 300px;
+  margin: auto;
+  padding: 30px;
+  border: 5px solid gainsboro;
+  text-align: center;
+}
+
+.bg-red {
+  display: inline-block;
+  width: 200px;
+  margin: auto;
+  background-color: red;
+}
+
+.bg-blu {
+  display: inline-block;
+  width: 200px;
+  margin: auto;
+  background-color: blue;
+}

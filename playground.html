@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="css/style.css" rel="stylesheet" />
+
+    <script>
+      function modificaContentDiv() {
+        var mainContentDiv = document.getElementById("content");
+        mainContentDiv.innerHTML = "<h2> WOW WOW </h2>";
+      }
+
+      function countup() {
+        for (var i = 0; i < 5; i++) {
+          console.log(i);
+        }
+        console.log(i);
+      }
+
+      function counterAdd() {
+        let count = document.getElementById("countup").innerText;
+        count = count + 1;
+        document.getElementById("countup").innerText = count;
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1 class="custom-color">PLAYGROUND HTML + CSS + JS DI IVAN</h1>
+
+    <div id="content">Boh</div>
+
+    <h1 id="countup">0</h1>
+
+    <button onclick="counterAdd()">+</button>
+
+    <div id="css-play">
+      <p class="custom-card">SONO IL CONTENUTO</p>
+    </div>
+  </body>
+
+  <script>
+    // countup();
+    // esempio timeout
+    setTimeout(() => modificaContentDiv(), 3000);
+
+    // countup();
+  </script>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      function showSomething() {
+        document.getElementById("content").innerHTML = "<h1>QUALCOSAAAAA</h1>";
+      }
+
+      function showCar() {
+        let car = { model: "Punto", brand: "Fiat", km: 12345 };
+        car.anno = 2012;
+        document.getElementById("content").innerHTML =
+          car.model + " - " + car.brand + " - " + car.anno;
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>HOME PAGE</h1>
+    <div>PARTE STATICA</div>
+
+    <p>CIAO</p>
+    <p>BOH</p>
+
+    <a href="#">CIAO</a>
+    <a href="#">BOH</a>
+
+    <!-- <div>PARTE JS</div>
+    <div id="content"></div> -->
+  </body>
+
+  <!-- <button onclick="showSomething()">MOSTRA QUALCOSA</button> -->
+
+  <script>
+    // showSomething();
+    showCar();
+  </script>
+
+  <script>
+    function conta() {
+      for (let conto = 0; conto < 5; conto++) {
+        let somma = conto;
+        console.log(conto);
+      }
+      console.log("CONTO FINALE: " + conto);
+      // console.log("SOMMA FINALE: " + somma);
+    }
+
+    conta();
+  </script>
+
+  <script>
+    function getSWShips() {
+      let httpPromise = fetch("https://swapi.dev/api/starships");
+
+      httpPromise.then(function (data) {
+        // console.log(data);
+        data.json().then(function (body) {
+          console.log(body);
+        });
+      });
+    }
+
+    getSWShips();
+  </script>
+</html>
