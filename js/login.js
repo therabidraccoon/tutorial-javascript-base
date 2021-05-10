@@ -63,3 +63,17 @@ function test() {
 
   console.log("FINE TEST");
 }
+
+function testPromise() {
+  let playPromise = new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("FINITO TIMEOUT");
+    }, 5000);
+  });
+
+  console.log("promise mandata");
+
+  playPromise.then((pippo) => {
+    alert(pippo);
+  });
+}
