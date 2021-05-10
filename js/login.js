@@ -48,7 +48,7 @@ function test() {
   let userName = null;
   let testPromise = fetch("http://localhost:8080/test", options);
 
-  testPromise.then(function (data) {
+  testPromise.then((data) => {
     console.log("RISPOSTA ARRIVATA");
     console.log(data);
     data.json().then((user) => {
